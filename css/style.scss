@@ -1,0 +1,1182 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.eot');
+    src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Regular.woff') format('woff'),
+        url('../fonts/SourceSansPro-Regular.ttf') format('truetype'),
+        url('../fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Bold.eot');
+    src: url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Bold.woff') format('woff'),
+        url('../fonts/SourceSansPro-Bold.ttf') format('truetype'),
+        url('../fonts/SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+// ---variables for colors---
+$white: #fff;
+$faqbg1: #f8f8f8;
+$facilitiesbg: #f7f9fb;
+$grey: grey;
+$blue: #177ee5;
+$background1: #f7f9fb;
+$faq-clr: #6b7074;
+$blackPtag: #505356;
+$blackh2tag: #212529;
+$Blackcardh3: #161e39;
+$cardBackground: #fbf7f8;
+$blueBackground: #1976D2;
+$italic-ptag: #898989;
+$appoinmemtBlue: #2183e6;
+$footerBackground: #177ee5;
+$menua: #a1caf4;
+$appoinmemtclr: #2686e6;
+$carouselIndicator: #b3b3b3;
+$reviewUserRole: #c9c9c9;
+$heroTextLight: #e6e6e6;
+$footerTextLight: #d5d9dd;
+$footerBorderLight: #a6a6a6;
+$blueShadow: #c5d8f5;
+$phoneOverlay: #000000ad;
+$cardShadow: #d1d5db;
+$lightBorder: #e8ecf0;
+$veryLightBorder: #e5e9f0;
+$darkBg: #333;
+$darkBlueAlt: #1565c0;
+$darkText: #222222;
+$yellow:yellow;
+
+// ----Common-classes----
+body {
+    font-family: 'Source Sans Pro';
+}
+::selection{
+     background: $yellow;
+}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.fclear {
+    clear: both;
+}
+
+.Titles {
+    text-align: center;
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: $blackh2tag;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 17px;
+        max-width: 620px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        padding: 0px 22px;
+    }
+}
+p {
+    font-size: 15px;
+    color: $blackPtag;
+    line-height: 20px;
+    line-height: 24px;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.custom-container {
+    padding: 0;
+    margin: 0;
+
+    .header {
+        background-color: $blueBackground;
+        background-image: url('../images/hero-bg.png');
+        background-size: 162%;
+        background-position: -1px 30px;
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+
+        .top-navbar {
+            background-color: transparent;
+            border-bottom: 1px solid $white;
+            padding: 20px 0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            margin-bottom: 0;
+
+            .bg-rem {
+                background: $blue;
+            }
+
+            .navbar-logo {
+                padding: 12px 0;
+
+                img {
+                    height: 46px;
+                }
+            }
+
+            .center-menu {
+                float: none;
+                display: block;
+                text-align: center;
+
+                li {
+                    float: none;
+                    display: inline-block;
+
+                    a {
+                        color: $menua;
+                        font-size: 16px;
+                        font-weight: 600;
+                        padding: 25px 20px;
+                        background: none;
+                        display: inline-block;
+                        position: relative;
+
+                        &:hover {
+                            color: $white;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 33%;
+                            height: 2px;
+                            background-color: $white;
+                            bottom: 18px;
+                            left: 34%;
+                            opacity: 0;
+                            transition: Opacity 1s ease;
+                        }
+
+                        &:hover::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .appointment-btn {
+                background-color: $white;
+                color: $appoinmemtclr;
+                border: 2px solid $white;
+                border-radius: 25px;
+                text-decoration: none;
+                padding: 10px 8px;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-top: 14px;
+                margin-left: 8px;
+
+                &:hover {
+                    background-color: $blueBackground;
+                    color: $white;
+                    border-color: $white;
+                }
+            }
+
+            .mobile-menu-btn {
+                border-color: $white;
+                margin-top: 18px;
+
+                .icon-bar {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+// header2 Section 
+.hero-carousel {
+    .carousel-inner {
+        .item {
+            .carousel-caption {
+                position: absolute;
+                top: 23%;
+                right: 10%;
+                bottom: auto;
+                text-align: left;
+                padding-left: 160px;
+
+                .btn {
+                    padding: 10px 20px;
+                }
+
+                h1 {
+                    font-size: 52px;
+                    font-weight: 800;
+                    color: $white;
+                    line-height: 58px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 17px;
+                    color: $white;
+                    margin-bottom: 35px;
+                    max-width: 460px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .carousel-indicators {
+        li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $carouselIndicator;
+            border: none;
+            margin: 0 4px;
+
+            &.active {
+                width: 28px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.hero-content {
+    margin-top: 220px;
+    padding-bottom: 80px;
+
+    h1 {
+        font-size: 60px;
+        font-weight: 800;
+        color: $white;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        color: $heroTextLight;
+        margin-bottom: 20px;
+        max-width: 460px;
+        line-height: 1.8;
+    }
+
+    .hero-btn {
+        background-color: $white;
+        color: $darkText;
+        border-radius: 25px;
+        padding: 13px 36px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 2px solid $white;
+        display: inline-block;
+
+        &:hover {
+            background-color: transparent;
+            color: $white;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.hero-image {
+    margin-top: 30px;
+}
+
+// --section1----
+.bodySection {
+    .features-section {
+        background-color: $white;
+        padding: 60px 0 60px;
+
+        .features-row {
+            padding-top: 35px;
+        }
+
+        .feature-card {
+            background-color: $white;
+            border: 1px solid $lightBorder;
+            padding: 40px 25px 35px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            box-shadow: 0px 5px 20px $cardShadow;
+
+            &:hover {
+                box-shadow: 0px 0px 20px $blue;
+
+                .clock {
+                    i {
+                        transform: rotate(360deg);
+                        font-size: 35px;
+                        animation: spin 1s linear infinite;
+                        transition: transform 0.5s ease;
+                    }
+                }
+
+                i {
+                    transform: scale(1.2);
+                    transition: transform 1s ease-in-out;
+                }
+
+                .feature-icon {
+                    width: 80px;
+                    height: 80px;
+                    line-height: 90px;
+                    box-shadow: 0px 0px 20px $blue;
+                }
+            }
+
+            .feature-icon {
+                width: 70px;
+                height: 70px;
+                background-color: $blue;
+                border-radius: 50%;
+                margin: 0 auto 25px;
+                line-height: 70px;
+                text-align: center;
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                margin-left: -35px;
+
+                i {
+                    color: $white;
+                    font-size: 31px;
+                    line-height: 68px;
+
+                }
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                color: $Blackcardh3;
+                margin-bottom: 15px;
+                margin-top: 20px;
+            }
+
+        }
+    }
+}
+
+// --section2----
+.about-section {
+    background-color: $background1;
+    padding: 0;
+
+    .about-content {
+        padding: 50px 0px;
+
+        .abou-para {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: $Blackcardh3;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: bolder;
+            color: $darkText;
+            margin-bottom: 20px;
+        }
+    }
+
+    .about-item {
+        margin-bottom: 20px;
+
+        &:hover {
+            .about-icon {
+                i {
+                    transform: scale(1.4);
+                }
+
+                box-shadow: 0px 0px 10px $blue;
+                width: 70px;
+                height: 70px;
+                line-height: 76px;
+            }
+
+            .tick {
+                i {
+                    transform: rotate(360deg);
+                    font-size: 30px;
+                    transition: transform 0.5s ease;
+
+                    &.fa-check-square-o {
+                        color: green;
+                    }
+                }
+
+                border: 2px solid green;
+                box-shadow: 0px 0px 10px green;
+                width: 70px;
+                height: 70px;
+                line-height: 76px;
+            }
+        }
+
+        .about-icon {
+            width: 60px;
+            margin-top: 13px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid $blue;
+            text-align: center;
+            line-height: 56px;
+            float: left;
+            margin-right: 20px;
+
+            i {
+                color: $blue;
+                font-size: 22px;
+                line-height: 56px;
+                transition: transform 1s ease-in-out;
+            }
+
+
+        }
+
+        .about-item-text {
+            padding-top: 2px;
+
+            h4 {
+                font-size: 17px;
+                font-weight: 700;
+                color: $darkText;
+                margin-bottom: 6px;
+            }
+        }
+    }
+
+    .about-image {
+        padding-top: 55px;
+
+        img {
+            width: 90%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+// ----section3----
+.Departments-section {
+    padding: 55px 0 60px;
+
+    .med-depts {
+        .depts {
+            background: $cardBackground;
+            margin: 0 auto;
+            position: relative;
+            border-bottom: 3px solid $blue;
+            margin-bottom: 25px;
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                padding: 0px 42px 20px 42px;
+            }
+
+            h3 {
+                font-size: 18px;
+                color: $Blackcardh3;
+                margin-top: 40px;
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+
+
+            &:hover {
+                box-shadow: 0px 0px 20px $blue;
+
+                i {
+                    transform: translateY(-15px);
+                    transition: transform 1s ease-in-out;
+                    width: 80px;
+                    height: 80px;
+                    box-shadow: 0px 0px 20px $blue;
+                    line-height: 78px;
+                }
+            }
+
+            i {
+                width: 70px;
+                height: 70px;
+                background-color: $white;
+                border-radius: 50%;
+                margin: 0 auto 25px;
+                line-height: 70px;
+                text-align: center;
+                position: absolute;
+                margin-top: -35px;
+                left: 50%;
+                margin-left: -35px;
+                color: $blue;
+                font-size: 28px;
+                line-height: 70px;
+            }
+
+        }
+    }
+}
+
+// -----section5------
+.reviewSection {
+    background: $blueBackground;
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 70px 0 20px;
+
+    .Titles {
+        h2 {
+            color: $white;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+
+    // White review card
+    .review-block {
+        background-color: $white;
+        padding: 25px 25px 20px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        position: relative;
+
+        // Quote icon — absolute, behind text
+        .review-quote {
+            position: absolute;
+            top: 19px;
+            left: 15px;
+            color: $blueShadow;
+            font-size: 25px;
+            z-index: 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: $blackPtag;
+            line-height: 1.7;
+            text-align: center;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    // User photo + name below card
+    .review-user {
+        padding-left: 10px;
+
+        img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 14px;
+        }
+
+        .review-user-info {
+            padding-top: 8px;
+
+            h5 {
+                color: $white;
+                font-size: 15px;
+                font-weight: 700;
+                margin: 0 0 3px;
+            }
+
+            span {
+                color: $white;
+                font-size: 13px;
+            }
+        }
+    }
+
+    // Dots
+    .review-dots {
+        position: relative;
+        bottom: auto;
+        margin-top: 50px;
+
+        li {
+            &.active {
+                background-color: $white;
+                width: 20px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+// ---section6----
+.doctorsSection {
+    padding: 70px 0 20px;
+
+    .custom-media {
+        margin-bottom: 40px;
+
+        .italic-ptag {
+            font-style: italic;
+            font-size: 15px;
+            color: $italic-ptag;
+            margin-bottom: 20px;
+            line-height: 22px;
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $appoinmemtBlue;
+            font-weight: bold;
+        }
+    }
+}
+
+// ---section7---
+.facilities {
+    padding: 40px 20px;
+    background: $facilitiesbg;
+
+    img {
+        transition: transform 0.4s ease-in-out;
+        width: 28%;
+        margin: 0px 20px;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px $blue;
+        }
+    }
+}
+
+// -----section8----
+.appointment-section {
+    padding: 60px 0;
+
+    .appt-img-col {
+        padding: 0;
+        background-color: $darkBg;
+
+        .appt-image {
+            position: relative;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                min-height: 561px;
+                display: block;
+                object-fit: cover;
+            }
+
+            .appt-phone {
+                position: absolute;
+                bottom: 118px;
+                left: 122px;
+                width: 80%;
+                background-color: $phoneOverlay;
+                padding: 18px 25px;
+
+                i {
+                    color: $white;
+                    font-size: 22px;
+                    margin-right: 12px;
+                    vertical-align: middle;
+                }
+
+                span {
+                    color: $white;
+                    font-size: 34px;
+                    font-weight: bold;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .appt-form-col {
+        padding: 0;
+        background-color: $blueBackground;
+    }
+
+    .appt-form-wrap {
+        padding: 50px 45px;
+
+        h2 {
+            color: $white;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+
+        .custom-form-group {
+            margin-bottom: 20px;
+        }
+
+        .custom-appt-input {
+            width: 100%;
+            background-color: $white;
+            border: none;
+            border-radius: 4px;
+            color: $blackPtag;
+            font-size: 14px;
+            padding: 10px 16px;
+            height: 50px;
+            box-shadow: none;
+
+            &::placeholder {
+                color: $blackPtag;
+            }
+        }
+
+        .custom-select {
+            cursor: pointer;
+            color: $blackPtag;
+        }
+
+        .custom-textarea {
+            height: 120px;
+        }
+
+        .custom-appt-btn {
+            background-color: $white;
+            color: $blueBackground;
+            border-radius: 4px;
+            padding: 10px 18px;
+            font-size: 14px;
+            outline: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid $white;
+            margin-top: 5px;
+            transition: 0.3s ease;
+        }
+    }
+}
+
+// ---section9----
+.questionSection {
+    background-color: #fff;
+    padding: 0px 0 40px;
+
+
+    .faq-button {
+        width: 100%;
+        padding: 18px 20px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: block;
+
+    }
+
+    i {
+        float: right;
+
+    }
+
+    .faq-black {
+        background-color: $faqbg1;
+        color: $darkText;
+        box-shadow: 0px 0px 1px $faq-clr;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .faq-blue {
+        background-color: $faqbg1;
+        color: $blue;
+        font-weight: bold;
+
+        i {
+            transform: rotate(180deg);
+        }
+    }
+
+    .faq-hide {
+        display: none;
+    }
+
+    .faq-show {
+        display: block;
+    }
+
+    .faq-container {
+        background-color: $background1;
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+
+        p {
+            font-size: 16px;
+            color: $blackPtag;
+            line-height: 20px;
+            margin: 0;
+        }
+    }
+
+    .faq-image {
+        padding-top: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// ---footer----
+.footer {
+    .footerhead {
+        background-color: $footerBackground;
+        background-image: url('../images/hero-bg.png'),
+            url('../images/footerwave.png');
+        background-size: 169%, 120% auto;
+        background-position: 1% 13px, left top;
+        background-repeat: no-repeat, no-repeat;
+        position: relative;
+        width: 100%;
+        padding: 0 0 30px;
+
+        &:hover {
+            animation: waveOscillate 3s ease-in-out infinite alternate;
+        }
+
+        .border {
+            border-top: 1px solid $footerBorderLight;
+            padding-top: 30px;
+        }
+    }
+
+    .Titles {
+        padding: 235px 20px 50px;
+        text-align: center;
+
+        h2 {
+            color: $white;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: $white;
+            font-size: 18px;
+            margin-bottom: 25px;
+            padding: 5px;
+        }
+
+        .newsletter-wrap {
+            width: 460px;
+            margin: 0 auto;
+            position: relative;
+
+            input {
+                width: 100%;
+                height: 52px;
+                border-radius: 30px;
+                border: none;
+                padding: 0 140px 0 25px;
+                font-size: 14px;
+                background-color: $white;
+                outline: none;
+                color: $blackPtag;
+
+                &:focus {
+                    background: $lightBorder;
+                }
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 52px;
+                padding: 0 28px;
+                border-radius: 30px;
+                border: 1px solid $white;
+                background: $blue;
+                color: $white;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer-cols {
+        padding: 10px 20px 20px;
+    }
+
+    .footer-widget {
+        margin-bottom: 25px;
+
+        .footer-logo {
+            margin-bottom: 16px;
+
+            img {
+                height: 55px;
+                width: auto;
+            }
+        }
+
+        p {
+            color: $white;
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        h4 {
+            color: $white;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+    }
+
+    .footer-socials {
+        a {
+            display: inline-block;
+            width: 45px;
+            background: $white;
+            height: 45px;
+            border-radius: 50%;
+            color: $blue;
+            text-align: center;
+            line-height: 34px;
+            font-size: 14px;
+            margin-right: 6px;
+            transition: all 0.4s ease;
+
+            &:hover {
+                transform: scale(1.3);
+                margin-right: 12px;
+                color: $white;
+            }
+
+            i {
+                font-size: 20px;
+                line-height: 45px;
+
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+
+        .instagram {
+            &:hover {
+                background: linear-gradient(to right,
+                        #feda75,
+                        #fa7e1e,
+                        #d62976,
+                        #962fbf,
+                        #4f5bd5);
+            }
+        }
+
+        .twitter {
+            &:hover {
+                background: linear-gradient(to right,
+                        #0074fd,
+                        #008cff,
+                        #009cff,
+                        #57bdff,
+                        #73aed2);
+            }
+        }
+
+        .facebook {
+            &:hover {
+                background: linear-gradient(to right,
+                        #003ead,
+                        #005ef4),
+            }
+        }
+
+        .linkedin {
+            &:hover {
+                background: linear-gradient(to right,
+                        #2470eb);
+            }
+        }
+    }
+
+    .footer-links {
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 12px;
+
+            a {
+                color: $footerTextLight;
+                font-size: 17px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .footer-contact {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: 20px;
+            color: $footerTextLight;
+            font-size: 14px;
+
+            .contact-icon {
+                float: left;
+                width: 30px;
+                font-size: 18px;
+                margin-top: 3px;
+
+                i {
+                    color: $white;
+                    text-align: center;
+                }
+            }
+
+            .contact-text {
+                padding-left: 20px;
+                line-height: 26px;
+                font-size: 15px;
+
+                a {
+                    color: $footerTextLight;
+                    text-decoration: none;
+                    font-size: 16px;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .footer-copy {
+        color: $footerTextLight;
+        font-size: 14px;
+        padding-bottom: 10px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        strong {
+            color: $white;
+        }
+    }
+}
+
+// ----footerwave----
+@keyframes waveOscillate {
+    0% {
+        background-position: center center, left top;
+    }
+
+    100% {
+        background-position: center center, right top;
+    }
+}
+
+// ---clock-spin-----
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-content {
+    background: $blue !important;
+    color: $white;
+    font-weight: bold;
+
+    .modal-body {
+        p {
+            color: $white;
+        }
+
+    }
+}

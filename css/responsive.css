@@ -1,0 +1,160 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .HeaderSection {
+    margin: 0;
+    border: none;
+  }
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .custom-nav {
+    padding: 15px;
+  }
+  .custom-nav .navbar-header {
+    background: url("../images/logo.png") no-repeat 15px 5px;
+  }
+  .top-navbar {
+    padding: 20px 15px;
+  }
+  .custom-container .header .top-navbar .center-menu li {
+    float: none;
+    display: block;
+  }
+  .custom-container .header .top-navbar .center-menu {
+    text-align: left;
+  }
+  .custom-container .header .top-navbar .center-menu li a {
+    padding: 18px 20px;
+  }
+  .custom-container .header .top-navbar .navbar-logo img {
+    margin-left: 20px;
+  }
+  .custom-container .header .top-navbar .appointment-btn {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .hero-content {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .hero-content p {
+    font-size: 17px;
+    margin-bottom: 35px;
+    max-width: 460px;
+    line-height: 1.8;
+  }
+  .hero-content .hero-btn {
+    border-radius: 25px;
+    padding: 13px 36px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .hero-image {
+    margin-top: 30px;
+  }
+  .hero-image img {
+    width: 100%;
+  }
+  .facilities img {
+    margin: 20px 0px;
+    width: 100%;
+  }
+  .custom-media {
+    text-align: center;
+  }
+  .custom-media .media-left,
+  .custom-media .media-body {
+    display: block;
+    width: 100%;
+  }
+  .custom-media .media-left img {
+    width: 180px;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+  .custom-media h3 {
+    font-size: 18px;
+  }
+  .custom-media .italic-ptag {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .custom-media a {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .about-section .about-item .about-icon {
+    margin-top: 49px;
+    margin-bottom: 29px;
+  }
+  .appointment-section .appt-img-col .appt-image {
+    text-align: center;
+  }
+  .appointment-section .appt-img-col .appt-image img {
+    width: 100%;
+    min-height: 0px;
+  }
+  .appointment-section .appt-img-col .appt-image .appt-phone {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 8px 10px;
+  }
+  .appointment-section .appt-img-col .appt-image .appt-phone span {
+    font-size: 20px;
+  }
+  .appointment-section .appt-form-wrap {
+    padding: 30px 20px;
+  }
+  .appointment-section .appt-form-wrap h2 {
+    font-size: 24px;
+  }
+  .reviewSection .review-block {
+    margin-top: 20px;
+  }
+  .appointment-section {
+    padding: 0px 0;
+  }
+  .questionSection .faq-image img {
+    margin-left: 30px;
+  }
+  .footer .Titles .newsletter-wrap {
+    width: 250px;
+  }
+  .footer .Titles .newsletter-wrap button {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+  .footer .Titles .newsletter-wrap input {
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    padding: 0 140px 0 25px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #555;
+  }
+  .footer .footer-contact li i {
+    font-size: 15px;
+    margin-top: 6px;
+  }
+  .footer .footer-copy {
+    font-size: 13px;
+  }
+}/*# sourceMappingURL=responsive.css.map */
